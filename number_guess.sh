@@ -24,6 +24,7 @@ while :; do
   read GUESS
   if [[ ! $GUESS =~ ^[0-9]+$ ]]; then
     echo "That is not an integer, guess again:"
+    continue
   elif (( GUESS > SECRET_NUMBER )); then
     echo "It's lower than that, guess again:"
   elif (( GUESS < SECRET_NUMBER )); then
